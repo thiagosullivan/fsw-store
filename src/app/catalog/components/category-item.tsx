@@ -8,7 +8,7 @@ interface CategoryItemProps {
 const CategoryItem = ({category}: CategoryItemProps) => {
     return (
         <div className="flex flex-col">
-            <div className="w-full h-[150px] rounded-tl-lg round-tr-lg flex items-center justify-center bg-category-item-gradient">
+            <div className="w-full h-[150px] rounded-tl-lg rounded-tr-lg flex items-center justify-center bg-category-item-gradient">
                 <Image
                     src={category.imageUrl}
                     alt={category.name}
