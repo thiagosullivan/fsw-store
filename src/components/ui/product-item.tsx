@@ -10,8 +10,8 @@ interface ProducItemProps {
 
 const ProductItem = ({product}: ProducItemProps) => {
     return (
-        <div className="flex flex-col gap-4 max-w-[156px]">
-            <div className="bg-accent rounded-lg h-[170px] w-[156px] flex items-center justify-center relative">
+        <div className="flex flex-col gap-4 max-w-[170px]">
+            <div className="bg-accent rounded-lg h-[170px] w-[170px] flex items-center justify-center relative">
                 <Image
                     src={product.imageUrls[0]}
                     height={0}
@@ -34,13 +34,13 @@ const ProductItem = ({product}: ProducItemProps) => {
                 <p className="text-sm overflow-hidden whitespace-nowrap text-ellipsis w-full">
                     {product.name}
                 </p>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 overflow-hidden whitespace-nowrap text-ellipsis">
                     {product.discountPercentage > 0 ? (
                         <>
-                            <p className="font-semibold">
+                            <p className="overflow-hidden text-ellipsis whitespace-nowrap font-semibold">
                                 R$ {product.totalPrice.toFixed(2)}
                             </p>
-                            <p className="opacity-75 line-through text-xs">
+                            <p className="overflow-hidden text-ellipsis whitespace-nowrap opacity-75 line-through text-xs">
                                 R$ {Number(product.basePrice).toFixed(2)}
                             </p>
                         </>
